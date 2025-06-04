@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Preloader from "@/components/Preloader";
 import AnimatedText from "@/components/AnimatedText";
@@ -65,49 +66,55 @@ const Index = () => {
       <Preloader />
       <Layout>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-blue-900 opacity-50"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 animate-bounce-in">
+                <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 animate-bounce-in shadow-lg">
                   ISO 9001:2015 Certified
                 </Badge>
                 <h1 className="text-5xl font-bold mb-6 leading-tight">
                   <AnimatedText 
                     text="Custom Precision Springs for Every Industry" 
-                    type="typewriter" 
+                    type="wave" 
                     delay={500}
+                    className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent"
                   />
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
                   <AnimatedText 
                     text="Leading manufacturer of high-quality compression, extension, and torsion springs. Trusted by industries worldwide for over 25 years."
                     delay={2000}
+                    type="fade"
                   />
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '3s' }}>
                   <Link to="/quote">
-                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:scale-105">
+                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:scale-105 hover:shadow-xl transform">
                       Get Custom Quote
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                   <Link to="/products">
-                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 hover:scale-105">
+                    <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 hover:scale-105 hover:shadow-xl transform">
                       View Products
                     </Button>
                   </Link>
                 </div>
               </div>
               <div className="relative animate-scale-in" style={{ animationDelay: '1s' }}>
-                <img 
-                  src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Precision Spring Manufacturing"
-                  className="rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
-                />
-                <div className="absolute -bottom-6 -left-6 bg-white text-blue-900 p-6 rounded-lg shadow-xl animate-bounce-in" style={{ animationDelay: '1.5s' }}>
-                  <div className="text-3xl font-bold">25+</div>
+                <div className="relative group">
+                  <img 
+                    src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    alt="Precision Spring Manufacturing"
+                    className="rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-105 animate-float"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent rounded-lg"></div>
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-white text-blue-900 p-6 rounded-lg shadow-xl animate-bounce-in transform hover:scale-105 transition-all duration-300" style={{ animationDelay: '1.5s' }}>
+                  <div className="text-3xl font-bold text-orange-500">25+</div>
                   <div className="text-sm">Years Experience</div>
                 </div>
               </div>
@@ -120,7 +127,7 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 animate-fade-in">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Choose PrecisionSprings?
+                <AnimatedText text="Why Choose PrecisionSprings?" type="glow" />
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We combine advanced manufacturing technology with decades of engineering expertise 
@@ -130,12 +137,12 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+                <Card key={index} className="text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-fade-in transform hover:-translate-y-2 group" style={{ animationDelay: `${index * 0.2}s` }}>
                   <CardHeader>
-                    <div className="flex justify-center mb-4">
+                    <div className="flex justify-center mb-4 group-hover:animate-bounce">
                       {feature.icon}
                     </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl group-hover:text-blue-600 transition-colors duration-300">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-gray-600">
@@ -149,12 +156,13 @@ const Index = () => {
         </section>
 
         {/* Products Overview */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 bg-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in-right">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Complete Spring Solutions
+                  <AnimatedText text="Complete Spring Solutions" type="wave" />
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
                   From prototype to production, we manufacture a full range of springs and wire forms 
@@ -168,15 +176,15 @@ const Index = () => {
                     "Torsion Springs - Rotational force springs for mechanical applications",
                     "Wire Forms - Custom bent wire components and assemblies"
                   ].map((item, index) => (
-                    <div key={index} className="flex items-start animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5" />
+                    <div key={index} className="flex items-start animate-fade-in transform hover:translate-x-2 transition-transform duration-300" style={{ animationDelay: `${index * 0.2}s` }}>
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 mt-0.5 animate-pulse" />
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
                 </div>
                 
                 <Link to="/products">
-                  <Button className="bg-blue-900 hover:bg-blue-800 transition-all duration-300 hover:scale-105">
+                  <Button className="bg-blue-900 hover:bg-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-xl transform">
                     Explore All Products
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -184,32 +192,38 @@ const Index = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-4 animate-scale-in">
-                <img 
-                  src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Manufacturing Equipment"
-                  className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Quality Control"
-                  className="rounded-lg shadow-lg mt-8 transition-transform duration-300 hover:scale-105"
-                />
+                <div className="space-y-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                    alt="Manufacturing Equipment"
+                    className="rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl animate-float"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                    alt="Quality Control"
+                    className="rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl animate-float"
+                    style={{ animationDelay: '1s' }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Industries Served */}
-        <section className="py-16 bg-blue-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6 animate-fade-in">Industries We Serve</h2>
+        <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-800/50 to-transparent animate-gradient-shift"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-6 animate-fade-in">
+              <AnimatedText text="Industries We Serve" type="glow" />
+            </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Our precision springs are trusted across diverse industries for critical applications
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-blue-800 rounded-lg p-4 hover:bg-blue-700 transition-all duration-300 hover:scale-105 animate-bounce-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div key={index} className="bg-blue-800/50 backdrop-blur-sm rounded-lg p-4 hover:bg-blue-700/70 transition-all duration-300 hover:scale-105 animate-bounce-in transform hover:-translate-y-2 hover:shadow-xl" style={{ animationDelay: `${index * 0.1}s` }}>
                   <span className="font-medium">{industry}</span>
                 </div>
               ))}
@@ -217,7 +231,7 @@ const Index = () => {
             
             <div className="mt-12 animate-fade-in" style={{ animationDelay: '1s' }}>
               <Link to="/industries">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 hover:scale-105">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300 hover:scale-105 hover:shadow-xl transform">
                   Learn More About Our Industries
                 </Button>
               </Link>
@@ -234,16 +248,16 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 hover:scale-105 animate-slide-in-right" style={{ animationDelay: `${index * 0.3}s` }}>
+                <Card key={index} className="p-6 hover:shadow-2xl transition-all duration-500 hover:scale-105 animate-slide-in-right transform hover:-translate-y-2 group bg-white/80 backdrop-blur-sm" style={{ animationDelay: `${index * 0.3}s` }}>
                   <CardContent>
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                       ))}
                     </div>
-                    <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
+                    <p className="text-gray-600 mb-4 italic group-hover:text-gray-800 transition-colors duration-300">"{testimonial.text}"</p>
                     <div>
-                      <div className="font-semibold">{testimonial.name}</div>
+                      <div className="font-semibold text-blue-900">{testimonial.name}</div>
                       <div className="text-sm text-gray-500">{testimonial.company}</div>
                     </div>
                   </CardContent>
@@ -254,20 +268,23 @@ const Index = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-orange-500 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-scale-in">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+        <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-400/50 to-transparent animate-gradient-shift"></div>
+          <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-scale-in">
+            <h2 className="text-3xl font-bold mb-4">
+              <AnimatedText text="Ready to Get Started?" type="glow" />
+            </h2>
             <p className="text-xl mb-8">
               Get a custom quote for your spring requirements. Our engineering team is ready to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/quote">
-                <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 transition-all duration-300 hover:scale-105">
+                <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl transform">
                   Request Quote
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-500 transition-all duration-300 hover:scale-105">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-500 transition-all duration-300 hover:scale-105 hover:shadow-xl transform">
                   Contact Us
                 </Button>
               </Link>
