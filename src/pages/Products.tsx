@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Link } from "react-router-dom";
 import { 
   Download, 
@@ -21,6 +22,7 @@ const Products = () => {
       id: "compression",
       name: "Compression Springs",
       icon: <Settings className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
       description: "Coil springs that resist compression forces and return to original length when load is removed.",
       applications: [
         "Automotive suspension systems",
@@ -45,6 +47,7 @@ const Products = () => {
       id: "extension",
       name: "Extension Springs",
       icon: <Zap className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop",
       description: "Tension springs that extend when pulled and return to original length when released.",
       applications: [
         "Garage door systems",
@@ -69,6 +72,7 @@ const Products = () => {
       id: "torsion",
       name: "Torsion Springs",
       icon: <RotateCcw className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=600&fit=crop",
       description: "Springs that apply torque or rotational force around an axis.",
       applications: [
         "Hinges and latches",
@@ -93,6 +97,7 @@ const Products = () => {
       id: "wireforms",
       name: "Wire Forms",
       icon: <Wrench className="h-8 w-8" />,
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
       description: "Custom bent wire components and assemblies for specific applications.",
       applications: [
         "Display racks",
@@ -151,12 +156,34 @@ const Products = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-6">Our Products</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Comprehensive range of precision springs and wire forms manufactured 
-              to your exact specifications and quality standards.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl font-bold mb-6">Our Products</h1>
+              <p className="text-xl text-blue-100 mb-8">
+                Comprehensive range of precision springs and wire forms manufactured 
+                to your exact specifications and quality standards.
+              </p>
+              <div className="flex space-x-4">
+                <Link to="/quote">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+                    Get Custom Quote
+                  </Button>
+                </Link>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
+                  <Download className="h-4 w-4 mr-2" />
+                  Product Catalog
+                </Button>
+              </div>
+            </div>
+            <div>
+              <AspectRatio ratio={16 / 9}>
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop"
+                  alt="Spring manufacturing facility"
+                  className="rounded-lg object-cover w-full h-full"
+                />
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </section>
@@ -177,6 +204,16 @@ const Products = () => {
               <TabsContent key={type.id} value={type.id}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   <div>
+                    <div className="mb-6">
+                      <AspectRatio ratio={16 / 9}>
+                        <img
+                          src={type.image}
+                          alt={`${type.name} manufacturing`}
+                          className="rounded-lg object-cover w-full h-full shadow-lg"
+                        />
+                      </AspectRatio>
+                    </div>
+                    
                     <div className="flex items-center mb-6">
                       <div className="text-blue-600 mr-4">{type.icon}</div>
                       <h2 className="text-3xl font-bold text-gray-900">{type.name}</h2>
@@ -260,6 +297,30 @@ const Products = () => {
             <p className="text-xl text-gray-600">
               Wide selection of materials and surface treatments to meet your application requirements
             </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <AspectRatio ratio={16 / 9}>
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop"
+                alt="Spring materials and manufacturing process"
+                className="rounded-lg object-cover w-full h-full shadow-lg"
+              />
+            </AspectRatio>
+            <AspectRatio ratio={16 / 9}>
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=450&fit=crop"
+                alt="Precision manufacturing equipment"
+                className="rounded-lg object-cover w-full h-full shadow-lg"
+              />
+            </AspectRatio>
+            <AspectRatio ratio={16 / 9}>
+              <img
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=450&fit=crop"
+                alt="Quality control and testing"
+                className="rounded-lg object-cover w-full h-full shadow-lg"
+              />
+            </AspectRatio>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
