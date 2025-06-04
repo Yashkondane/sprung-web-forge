@@ -1,8 +1,8 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
+import DemoBanner from "./DemoBanner";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,23 +22,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen bg-white">
+      <DemoBanner />
+      
       {/* Header */}
-      <header className="bg-white shadow-lg relative z-50">
+      <header className="bg-white shadow-lg relative z-50 animate-slide-down">
         {/* Top bar */}
         <div className="bg-blue-900 text-white py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center text-sm">
               <div className="flex space-x-6">
-                <div className="flex items-center">
+                <div className="flex items-center animate-fade-in">
                   <Phone size={16} className="mr-2" />
                   <span>+1 (555) 123-4567</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
                   <Mail size={16} className="mr-2" />
                   <span>info@precisionsprings.com</span>
                 </div>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <MapPin size={16} className="mr-2" />
                 <span>ISO 9001:2015 Certified</span>
               </div>
@@ -50,29 +52,30 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold text-blue-900">
+              <Link to="/" className="text-2xl font-bold text-blue-900 animate-bounce-in">
                 PrecisionSprings
               </Link>
             </div>
 
             {/* Desktop navigation */}
             <nav className="hidden lg:flex space-x-8">
-              {navigation.map((item) => (
+              {navigation.map((item, index) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-gray-700 hover:text-blue-900 font-medium transition-colors ${
+                  className={`text-gray-700 hover:text-blue-900 font-medium transition-all duration-300 hover:scale-105 ${
                     isActive(item.href) ? "text-blue-900 border-b-2 border-blue-900" : ""
                   }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
                 </Link>
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden lg:flex items-center space-x-4 animate-scale-in">
               <Link to="/quote">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:scale-105">
                   Get Quote
                 </Button>
               </Link>
@@ -82,7 +85,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-gray-700 hover:text-blue-900"
+                className="text-gray-700 hover:text-blue-900 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -92,13 +95,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
         {/* Mobile navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-40">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-40 animate-slide-down">
             <div className="px-4 py-2 space-y-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded ${
+                  className={`block px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded transition-all duration-200 ${
                     isActive(item.href) ? "text-blue-900 bg-blue-50" : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -121,10 +124,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </header>
 
       {/* Main content */}
-      <main>{children}</main>
+      <main className="animate-fade-in">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white">
+      <footer className="bg-gray-900 text-white animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
