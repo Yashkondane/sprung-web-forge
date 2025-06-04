@@ -16,7 +16,7 @@ const Preloader = () => {
 
   return (
     <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
-      <div className="text-center">
+      <div className="text-center flex flex-col items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-900 mb-8"></div>
         <h2 className="text-2xl font-bold text-blue-900 animate-pulse">
           PrecisionSprings

@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -165,7 +164,7 @@ const Products = () => {
               </p>
               <div className="flex space-x-4">
                 <Link to="/quote">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white hover:text-white">
                     Get Custom Quote
                   </Button>
                 </Link>
@@ -269,11 +268,11 @@ const Products = () => {
                           </p>
                           <div className="flex space-x-3">
                             <Link to="/quote">
-                              <Button className="bg-orange-500 hover:bg-orange-600">
+                              <Button className="bg-orange-500 hover:bg-orange-600 text-white hover:text-white">
                                 Get Quote
                               </Button>
                             </Link>
-                            <Button variant="outline">
+                            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-700">
                               <Download className="h-4 w-4 mr-2" />
                               Download Spec Sheet
                             </Button>
@@ -358,7 +357,7 @@ const Products = () => {
                     <p className="text-gray-600 mb-4">
                       All treatments applied in accordance with industry standards and customer specifications.
                     </p>
-                    <Button variant="outline">
+                    <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-gray-700">
                       <Download className="h-4 w-4 mr-2" />
                       Materials Guide
                     </Button>
@@ -379,7 +378,7 @@ const Products = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/quote">
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white hover:text-white">
                 Request Custom Quote
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
