@@ -28,19 +28,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         {/* Top bar */}
         <div className="bg-blue-900 text-white py-2">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center text-sm">
-              <div className="flex space-x-6">
+            <div className="flex justify-between items-center text-xs md:text-sm">
+              <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-1 sm:space-y-0">
                 <div className="flex items-center animate-fade-in">
-                  <Phone size={16} className="mr-2" />
+                  <Phone size={14} className="mr-2" />
                   <span>+91 78230 82038</span>
                 </div>
                 <div className="flex items-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                  <Mail size={16} className="mr-2" />
-                  <span>info@precisionsprings.com</span>
+                  <Mail size={14} className="mr-2" />
+                  <span className="hidden sm:inline">info@precisionsprings.com</span>
+                  <span className="sm:hidden">info@precision...</span>
                 </div>
               </div>
-              <div className="flex items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <MapPin size={16} className="mr-2" />
+              <div className="hidden md:flex items-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <MapPin size={14} className="mr-2" />
                 <span>ISO 9001:2015 Certified</span>
               </div>
             </div>
@@ -51,18 +52,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold text-blue-900 animate-bounce-in">
+              <Link to="/" className="text-xl md:text-2xl font-bold text-blue-900 animate-bounce-in">
                 PrecisionSprings
               </Link>
             </div>
 
             {/* Desktop navigation */}
-            <nav className="hidden lg:flex space-x-8">
+            <nav className="hidden lg:flex space-x-6 xl:space-x-8">
               {navigation.map((item, index) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-gray-700 hover:text-blue-900 font-medium transition-all duration-300 hover:scale-105 ${
+                  className={`text-gray-700 hover:text-blue-900 font-medium transition-all duration-300 hover:scale-105 text-sm xl:text-base ${
                     isActive(item.href) ? "text-blue-900 border-b-2 border-blue-900" : ""
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -130,23 +131,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white animate-fade-in">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">PrecisionSprings</h3>
-              <p className="text-gray-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="col-span-1 sm:col-span-2 md:col-span-1">
+              <h3 className="text-lg md:text-xl font-bold mb-4">PrecisionSprings</h3>
+              <p className="text-gray-300 text-sm md:text-base mb-4">
                 Leading manufacturer of custom precision springs for industrial applications worldwide.
               </p>
               <div className="mt-4">
-                <span className="bg-blue-600 text-white px-3 py-1 rounded text-sm">
+                <span className="bg-blue-600 text-white px-3 py-1 rounded text-xs md:text-sm">
                   ISO 9001:2015 Certified
                 </span>
               </div>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2 text-gray-300">
+              <h4 className="font-semibold mb-4 text-sm md:text-base">Products</h4>
+              <ul className="space-y-2 text-gray-300 text-sm md:text-base">
                 <li><Link to="/products" className="hover:text-white">Compression Springs</Link></li>
                 <li><Link to="/products" className="hover:text-white">Extension Springs</Link></li>
                 <li><Link to="/products" className="hover:text-white">Torsion Springs</Link></li>
@@ -155,8 +156,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Industries</h4>
-              <ul className="space-y-2 text-gray-300">
+              <h4 className="font-semibold mb-4 text-sm md:text-base">Industries</h4>
+              <ul className="space-y-2 text-gray-300 text-sm md:text-base">
                 <li><Link to="/industries" className="hover:text-white">Automotive</Link></li>
                 <li><Link to="/industries" className="hover:text-white">Aerospace</Link></li>
                 <li><Link to="/industries" className="hover:text-white">Medical Devices</Link></li>
@@ -165,26 +166,26 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-gray-300">
+              <h4 className="font-semibold mb-4 text-sm md:text-base">Contact Info</h4>
+              <div className="space-y-2 text-gray-300 text-sm md:text-base">
                 <div className="flex items-center">
-                  <Phone size={16} className="mr-2" />
+                  <Phone size={14} className="mr-2 flex-shrink-0" />
                   <span>+91 78230 82038</span>
                 </div>
                 <div className="flex items-center">
-                  <Mail size={16} className="mr-2" />
-                  <span>info@precisionsprings.com</span>
+                  <Mail size={14} className="mr-2 flex-shrink-0" />
+                  <span className="break-all">info@precisionsprings.com</span>
                 </div>
-                <div className="flex items-center">
-                  <MapPin size={16} className="mr-2" />
+                <div className="flex items-start">
+                  <MapPin size={14} className="mr-2 mt-1 flex-shrink-0" />
                   <span>123 Industrial Way, Manufacturing City, MC 12345</span>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2024 PrecisionSprings. All rights reserved.</p>
+          <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-300">
+            <p className="text-sm md:text-base">&copy; 2024 PrecisionSprings. All rights reserved.</p>
           </div>
         </div>
       </footer>
