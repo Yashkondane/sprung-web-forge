@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,6 +18,7 @@ import {
   Award,
   MessageSquare
 } from "lucide-react";
+import LiveLocation from "@/components/LiveLocation";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -71,9 +71,9 @@ const Contact = () => {
       icon: <Phone className="h-6 w-6 text-green-600" />,
       title: "Phone Numbers",
       details: [
-        "Main: +1 (555) 123-4567",
-        "Sales: +1 (555) 123-4568",
-        "Engineering: +1 (555) 123-4569"
+        "Main: +91 78230 82038",
+        "Sales: +91 78230 82039",
+        "Engineering: +91 78230 82040"
       ]
     },
     {
@@ -102,28 +102,28 @@ const Contact = () => {
       title: "Sales Team",
       description: "Get quotes, pricing, and product information",
       contact: "sales@precisionsprings.com",
-      phone: "+1 (555) 123-4568"
+      phone: "+91 78230 82039"
     },
     {
       icon: <Award className="h-8 w-8 text-green-600" />,
       title: "Engineering Support",
       description: "Technical assistance and design consultation",
       contact: "engineering@precisionsprings.com",
-      phone: "+1 (555) 123-4569"
+      phone: "+91 78230 82040"
     },
     {
       icon: <Building className="h-8 w-8 text-orange-600" />,
       title: "Quality Assurance",
       description: "Quality concerns and certification questions",
       contact: "quality@precisionsprings.com",
-      phone: "+1 (555) 123-4570"
+      phone: "+91 78230 82041"
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-purple-600" />,
       title: "Customer Service",
       description: "General inquiries and support",
       contact: "support@precisionsprings.com",
-      phone: "+1 (555) 123-4567"
+      phone: "+91 78230 82038"
     }
   ];
 
@@ -237,7 +237,7 @@ const Contact = () => {
                       />
                     </div>
                     
-                    <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                    <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                       <Send className="h-4 w-4 mr-2" />
                       Send Message
                     </Button>
@@ -248,6 +248,9 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-6">
+              {/* Live Location Component */}
+              <LiveLocation />
+              
               {contactInfo.map((info, index) => (
                 <Card key={index}>
                   <CardHeader>
@@ -313,7 +316,6 @@ const Contact = () => {
           </div>
           
           <div className="rounded-lg overflow-hidden shadow-lg h-96 bg-gray-200">
-            {/* This would be replaced with an actual Google Maps iframe in production */}
             <div className="flex items-center justify-center h-full bg-blue-50">
               <div className="text-center p-8">
                 <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -321,7 +323,7 @@ const Contact = () => {
                 <p className="text-gray-600 max-w-md mx-auto">
                   123 Industrial Way, Manufacturing City, MC 12345, United States
                 </p>
-                <Button className="mt-4 bg-blue-600 hover:bg-blue-700">
+                <Button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white">
                   Get Directions
                 </Button>
               </div>
@@ -337,7 +339,7 @@ const Contact = () => {
           <p className="text-xl mb-8">
             Skip straight to our detailed quote request form for faster service.
           </p>
-          <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 hover:text-orange-600">
             Request a Custom Quote
           </Button>
         </div>
