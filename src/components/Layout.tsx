@@ -1,8 +1,9 @@
+
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
-import DemoBanner from "./DemoBanner";
+import WhatsAppButton from "./WhatsAppButton";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +23,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      <DemoBanner />
-      
       {/* Header */}
       <header className="bg-white shadow-lg relative z-50 animate-slide-down">
         {/* Top bar */}
@@ -33,7 +32,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div className="flex space-x-6">
                 <div className="flex items-center animate-fade-in">
                   <Phone size={16} className="mr-2" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 78230 82038</span>
                 </div>
                 <div className="flex items-center animate-fade-in" style={{ animationDelay: '0.1s' }}>
                   <Mail size={16} className="mr-2" />
@@ -126,6 +125,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       {/* Main content */}
       <main className="animate-fade-in">{children}</main>
 
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -167,7 +169,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div className="space-y-2 text-gray-300">
                 <div className="flex items-center">
                   <Phone size={16} className="mr-2" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 78230 82038</span>
                 </div>
                 <div className="flex items-center">
                   <Mail size={16} className="mr-2" />

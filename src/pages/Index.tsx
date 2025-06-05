@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Preloader from "@/components/Preloader";
 import AnimatedText from "@/components/AnimatedText";
@@ -88,7 +89,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '3s' }}>
                   <Link to="/quote">
-                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white hover:text-white transition-all duration-300 hover:scale-105">
+                    <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white transition-all duration-300 hover:scale-105">
                       Get Custom Quote
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -176,7 +177,7 @@ const Index = () => {
                 </div>
                 
                 <Link to="/products">
-                  <Button className="bg-blue-900 hover:bg-blue-800 text-white hover:text-white transition-all duration-300 hover:scale-105">
+                  <Button className="bg-blue-900 hover:bg-blue-800 text-white transition-all duration-300 hover:scale-105">
                     Explore All Products
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
