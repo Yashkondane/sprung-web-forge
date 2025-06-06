@@ -103,14 +103,12 @@ const Index = () => {
               </div>
               <div className="relative animate-scale-in order-first lg:order-last" style={{ animationDelay: '1s' }}>
                 <img 
-                  src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/public/images/bouncy-springs-Photoroom.png" 
                   alt="Precision Spring Manufacturing"
-                  className="rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 w-full"
+                  className="rounded-lg transition-transform duration-300 hover:scale-105 w-full"
                 />
-                <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white text-blue-900 p-4 md:p-6 rounded-lg shadow-xl animate-bounce-in" style={{ animationDelay: '1.5s' }}>
-                  <div className="text-2xl md:text-3xl font-bold">25+</div>
-                  <div className="text-xs md:text-sm">Years Experience</div>
-                </div>
+
+
               </div>
             </div>
           </div>
@@ -188,12 +186,13 @@ const Index = () => {
               
               <div className="grid grid-cols-2 gap-4 animate-scale-in order-1 lg:order-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Manufacturing Equipment"
+                  src="/public/images/What-is-the-Strongest-Spring-Material-b-1024x576.jpeg" 
+                  alt="Spring Close-Up"
                   className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 w-full"
                 />
+
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  src="/public/images/close-up-industrial-machine-parts-metal-springs-components-illuminated-warm-lighting-concept-mechanical-engineering-349282430.webp" 
                   alt="Quality Control"
                   className="rounded-lg shadow-lg mt-4 md:mt-8 transition-transform duration-300 hover:scale-105 w-full"
                 />
