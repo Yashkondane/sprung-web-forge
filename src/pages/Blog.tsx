@@ -6,7 +6,11 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
 import springImage from '/public/images/images(13).jpg';
-
+import springDesign from '/public/images/images(14).jpg';
+import springLoad from '/public/images/Choosing-the-Best-Material-for-Custom-Made-Springs-Featured-Image-380x238-2.jpg';
+import springPrecision from '/public/images/images(15).jpg';
+import springComparision from '/public/images/torsion-springs.jpeg';
+import springSurface from '/public/images/images.jpg';
 
 const Blog = () => {
   const blogPosts = [
@@ -28,7 +32,7 @@ const Blog = () => {
       date: "2024-05-10",
       category: "Design",
       readTime: "7 min read",
-      image: "/public/images/images(14).jpg"
+      image: springDesign
     },
     {
       id: 3,
@@ -38,7 +42,7 @@ const Blog = () => {
       date: "2024-05-05",
       category: "Engineering",
       readTime: "8 min read",
-      image: "/public/images/Choosing-the-Best-Material-for-Custom-Made-Springs-Featured-Image-380x238-2.jpg"
+      image: springLoad
     },
     {
       id: 4,
@@ -48,7 +52,7 @@ const Blog = () => {
       date: "2024-04-28",
       category: "Quality",
       readTime: "6 min read",
-      image: "/public/images/images(14).jpg"
+      image: springPrecision
     },
     {
       id: 5,
@@ -58,7 +62,7 @@ const Blog = () => {
       date: "2024-04-20",
       category: "Design",
       readTime: "10 min read",
-      image: "/public/images/torsion-springs.jpeg"
+      image: springComparision
     },
     {
       id: 6,
@@ -68,7 +72,7 @@ const Blog = () => {
       date: "2024-04-15",
       category: "Manufacturing",
       readTime: "9 min read",
-      image: "/public/images/images.jpg"
+      image: springSurface
     }
   ];
 
