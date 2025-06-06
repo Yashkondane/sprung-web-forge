@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
 
+
 const Blog = () => {
   const blogPosts = [
     {
@@ -16,7 +17,7 @@ const Blog = () => {
       date: "2024-05-15",
       category: "Materials",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/public/images/images(13).jpg"
     },
     {
       id: 2,
@@ -26,7 +27,7 @@ const Blog = () => {
       date: "2024-05-10",
       category: "Design",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/public/images/images(14).jpg"
     },
     {
       id: 3,
@@ -36,7 +37,7 @@ const Blog = () => {
       date: "2024-05-05",
       category: "Engineering",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/public/images/Choosing-the-Best-Material-for-Custom-Made-Springs-Featured-Image-380x238-2.jpg"
     },
     {
       id: 4,
@@ -46,7 +47,7 @@ const Blog = () => {
       date: "2024-04-28",
       category: "Quality",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/public/images/images(14).jpg"
     },
     {
       id: 5,
@@ -56,7 +57,7 @@ const Blog = () => {
       date: "2024-04-20",
       category: "Design",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/public/images/torsion-springs.jpeg"
     },
     {
       id: 6,
@@ -66,7 +67,7 @@ const Blog = () => {
       date: "2024-04-15",
       category: "Manufacturing",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "/public/images/images.jpg"
     }
   ];
 
