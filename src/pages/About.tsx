@@ -12,6 +12,7 @@ import {
   Eye,
   Heart
 } from "lucide-react";
+import suspensionSpringImg from '/public/images/compression-springs-img.jpg';
 
 const About = () => {
   const milestones = [
@@ -101,9 +102,11 @@ const About = () => {
             
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                alt="Our Manufacturing Facility"
-                className="rounded-lg shadow-lg"
+              src={suspensionSpringImg} 
+              alt="Our Manufacturing Facility"
+              width="800"
+              height="533"
+              className="rounded-lg shadow-lg object-cover"
               />
             </div>
           </div>
