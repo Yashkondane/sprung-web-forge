@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
+import springImage from '/public/images/images(13).jpg';
 
 
 const Blog = () => {
@@ -17,7 +18,7 @@ const Blog = () => {
       date: "2024-05-15",
       category: "Materials",
       readTime: "5 min read",
-      image: "/public/images/images(13).jpg"
+      image: springImage
     },
     {
       id: 2,
