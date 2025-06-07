@@ -16,6 +16,7 @@ import {
   ArrowRight,
   Star
 } from "lucide-react";
+import suspensionSpringImgG from '/public/images/bouncy-springs-Photoroom.png';
 
 const Index = () => {
   const features = [
@@ -103,7 +104,7 @@ const Index = () => {
               </div>
               <div className="relative animate-scale-in order-first lg:order-last" style={{ animationDelay: '1s' }}>
                 <img 
-                  src="/public/images/bouncy-springs-Photoroom.png" 
+                  src={suspensionSpringImgG}
                   alt="Precision Spring Manufacturing"
                   className="rounded-lg transition-transform duration-300 hover:scale-105 w-full"
                 />
