@@ -17,6 +17,9 @@ import {
   Star
 } from "lucide-react";
 import suspensionSpringImgG from '/public/images/bouncy-springs-Photoroom.png';
+import suspensionSpringImgGG from '/public/images/What-is-the-Strongest-Spring-Material-b-1024x576.jpeg';
+import suspensionSpringImgGGG from '/public/images/close-up-industrial-machine-parts-metal-springs-components-illuminated-warm-lighting-concept-mechanical-engineering-349282430.webp';
+
 
 const Index = () => {
   const features = [
@@ -187,13 +190,13 @@ const Index = () => {
               
               <div className="grid grid-cols-2 gap-4 animate-scale-in order-1 lg:order-2">
                 <img 
-                  src="/public/images/What-is-the-Strongest-Spring-Material-b-1024x576.jpeg" 
+                  src={suspensionSpringImgGG}
                   alt="Spring Close-Up"
                   className="rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 w-full"
                 />
 
                 <img 
-                  src="/public/images/close-up-industrial-machine-parts-metal-springs-components-illuminated-warm-lighting-concept-mechanical-engineering-349282430.webp" 
+                  src={suspensionSpringImgGGG}
                   alt="Quality Control"
                   className="rounded-lg shadow-lg mt-4 md:mt-8 transition-transform duration-300 hover:scale-105 w-full"
                 />
