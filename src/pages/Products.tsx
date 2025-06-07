@@ -14,6 +14,10 @@ import {
   RotateCcw,
   Wrench
 } from "lucide-react";
+import springF from '/public/images/cropped-61FGbuW7h5L._AC_UF894,1000_QL80_.png';
+import springM from '/public/images/music-wire-spring-2f-astm-228.jpg';
+import springP from '/public/images/Suspension-springs-960x639.jpg';
+import springQ from '/public/images/images(1).jpg';
 
 const Products = () => {
   const springTypes = [
@@ -177,7 +181,7 @@ const Products = () => {
             <div>
               <AspectRatio ratio={16 / 9}>
                 <img
-                  src="/public/images/cropped-61FGbuW7h5L._AC_UF894,1000_QL80_.png"
+                  src={springF}
                   alt="Spring manufacturing facility"
                   className="rounded-lg object-cover w-full h-full"
                 />
@@ -301,21 +305,21 @@ const Products = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             <AspectRatio ratio={16 / 9}>
               <img
-                src="/public/images/music-wire-spring-2f-astm-228.jpg"
+                src={springM}
                 alt="Spring materials and manufacturing process"
                 className="rounded-lg object-cover w-full h-full shadow-lg"
               />
             </AspectRatio>
             <AspectRatio ratio={16 / 9}>
               <img
-                src="/public/images/Suspension-springs-960x639.jpg"
+                src={springP}
                 alt="Precision manufacturing equipment"
                 className="rounded-lg object-cover w-full h-full shadow-lg"
               />
             </AspectRatio>
             <AspectRatio ratio={16 / 9}>
               <img
-                src="/public/images/images(1).jpg"
+                src={springQ}
                 alt="Quality control and testing"
                 className="rounded-lg object-cover w-full h-full shadow-lg"
               />
