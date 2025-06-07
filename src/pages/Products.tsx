@@ -18,6 +18,10 @@ import springF from '/public/images/cropped-61FGbuW7h5L._AC_UF894,1000_QL80_.png
 import springM from '/public/images/music-wire-spring-2f-astm-228.jpg';
 import springP from '/public/images/Suspension-springs-960x639.jpg';
 import springQ from '/public/images/images(1).jpg';
+import springC from '/public/images/1122-0026_Nested_compression_-_Lesjofors1-1024x683.webp';
+import springE from '/public/images/F0821447-01.webp';
+import springT from '/public/images/Torsion-Springs-Small.jpg';
+import springW from '/public/images/1613728188_p_5722122_1261554__1_-removebg-preview.png';
 
 const Products = () => {
   const springTypes = [
@@ -25,7 +29,7 @@ const Products = () => {
       id: "compression",
       name: "Compression Springs",
       icon: <Settings className="h-8 w-8" />,
-      image: "/public/images/1122-0026_Nested_compression_-_Lesjofors1-1024x683.webp",
+      image: springC,
       description: "Coil springs that resist compression forces and return to original length when load is removed.",
       applications: [
         "Automotive suspension systems",
@@ -50,7 +54,7 @@ const Products = () => {
       id: "extension",
       name: "Extension Springs",
       icon: <Zap className="h-8 w-8" />,
-      image: "/public/images/F0821447-01.webp",
+      image: springE,
       description: "Tension springs that extend when pulled and return to original length when released.",
       applications: [
         "Garage door systems",
@@ -75,7 +79,7 @@ const Products = () => {
       id: "torsion",
       name: "Torsion Springs",
       icon: <RotateCcw className="h-8 w-8" />,
-      image: "/public/images/Torsion-Springs-Small.jpg",
+      image:  springT,
       description: "Springs that apply torque or rotational force around an axis.",
       applications: [
         "Hinges and latches",
@@ -100,7 +104,7 @@ const Products = () => {
       id: "wireforms",
       name: "Wire Forms",
       icon: <Wrench className="h-8 w-8" />,
-      image: "/public/images/1613728188_p_5722122_1261554__1_-removebg-preview.png",
+      image: springW,
       description: "Custom bent wire components and assemblies for specific applications.",
       applications: [
         "Display racks",
